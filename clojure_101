@@ -57,10 +57,10 @@
 ;; <=
 
 ;; @@
-1/2
+1/3
 ;; @@
 ;; =>
-;;; {"type":"html","content":"<span class='clj-ratio'>1/2</span>","value":"1/2"}
+;;; {"type":"html","content":"<span class='clj-ratio'>1/3</span>","value":"1/3"}
 ;; <=
 
 ;; **
@@ -86,10 +86,10 @@
 ;; **
 
 ;; @@
-:this-is-a-keyword
+:first-name
 ;; @@
 ;; =>
-;;; {"type":"html","content":"<span class='clj-keyword'>:this-is-a-keyword</span>","value":":this-is-a-keyword"}
+;;; {"type":"html","content":"<span class='clj-keyword'>:first-name</span>","value":":first-name"}
 ;; <=
 
 ;; @@
@@ -152,7 +152,7 @@ this-will-fail
 '(+ 1 1)
 ;; @@
 ;; =>
-;;; {"type":"list-like","open":"<span class='clj-list'>(</span>","close":"<span class='clj-list'>)</span>","separator":" ","items":[{"type":"html","content":"<span class='clj-symbol'>+</span>","value":"+"},{"type":"html","content":"<span class='clj-long'>1</span>","value":"1"},{"type":"html","content":"<span class='clj-long'>1</span>","value":"1"}],"value":"(+ 1 1)"}
+;;; {"type":"html","content":"<span class='clj-class'>clojure.lang.PersistentList</span>","value":"clojure.lang.PersistentList"}
 ;; <=
 
 ;; @@
@@ -277,8 +277,25 @@ this-will-fail
 ;; **
 
 ;; @@
+(fn [x]
+    (str "Wazzaaaaaa " x "!"))
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-unkown'>#&lt;clojure_101$eval6209$fn__6210 clojure_101$eval6209$fn__6210@200826&gt;</span>","value":"#<clojure_101$eval6209$fn__6210 clojure_101$eval6209$fn__6210@200826>"}
+;; <=
+
+;; @@
+(def wazzzup
+  (fn [x]
+    (str "Wazzaaaaaa " x "!")))
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-var'>#&#x27;clojure-101/wazzzup</span>","value":"#'clojure-101/wazzzup"}
+;; <=
+
+;; @@
 (defn wazzzup [x]
-  (str "Wazzaaaaaa " x "!"))
+  (str "Wazzaaaadsdsadsaaa " x "!"))
 ;; @@
 ;; =>
 ;;; {"type":"html","content":"<span class='clj-var'>#&#x27;clojure-101/wazzzup</span>","value":"#'clojure-101/wazzzup"}
@@ -288,11 +305,11 @@ this-will-fail
 (wazzzup "Inaka")
 ;; @@
 ;; =>
-;;; {"type":"html","content":"<span class='clj-string'>&quot;Wazzaaaaaa Inaka!&quot;</span>","value":"\"Wazzaaaaaa Inaka!\""}
+;;; {"type":"html","content":"<span class='clj-string'>&quot;Wazzaaaadsdsadsaaa Inaka!&quot;</span>","value":"\"Wazzaaaadsdsadsaaa Inaka!\""}
 ;; <=
 
 ;; **
-;;; ### Higher Order Functions (HOFs)
+;;; ### Common Higher Order Functions (HOFs)
 ;; **
 
 ;; @@
