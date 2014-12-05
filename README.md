@@ -10,7 +10,7 @@ You can load the worsheet in the online viewer using the following link:
 [Clojure 101][online].
 
 To be able to edit the worksheet you need to run it locally. First install
-leiningen (see the instructions below) and then run `lein gorilla`. This will
+[leiningen][lein] (see the instructions below) and then run `lein gorilla`. This will
 print some messages to the console and then show a local url where a Gorilla
 REPL will be running.
 
@@ -37,6 +37,14 @@ Run the following from the command line:
 
 Download [this script][lein-bat], put it in your path and your done.
 
+### Interesting Projects & Resources
+
+- [NightMod](https://nightmod.net/) - IDE for Games
+- [4Clojure](http://www.4clojure.com/) - Solve little Clojure problems. Really useful for learning.
+- [TryClojure](http://www.tryclj.com/) - Run Clojure code online.
+
+
   [gorilla]: http://gorilla-repl.org/index.html
   [online]: http://viewer.gorilla-repl.org/view.html?source=github&user=jfacorro&repo=clojure-101&path=clojure_101.clj
   [lein-bat]: https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein.bat
+  [lein]: https://github.com/technomancy/leiningen/
